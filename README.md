@@ -13,22 +13,23 @@ A decentralized application (DApp) for minting NFTs using React, Ethers.js, and 
 1. Clone the repository:
 ```bash
 git clone <your-repository-url>
-cd nft-minting-app/hellonft
+cd nft-minting-app
 ```
 
-2. Install dependencies:
+2. Install all dependencies:
 ```bash
-npm install
+make setup
 ```
 
 3. Start the Hardhat node (in a separate terminal):
 ```bash
+cd nft-minting-app/hellonft
 npx hardhat node
 ```
 
 4. Compile the contract:
 ```bash
-npx hardhat compile
+make cc
 ```
 
 5. Set Environment variables by running following commands: (also create a .env file and set the values)
@@ -39,24 +40,14 @@ npx hardhat vars set PRIVATE_KEY
 
 6. Deploy the smart contract (in a separate terminal):
 ```bash
-npx hardhat ignition deploy ignition/modules/HelloToken.js --network <"sepolia|localhost">
+make deployc
 ```
 
 ## How to installation and run client app for development
 
 1. Start the development server:
 ```bash
-cd nft-minting-app/webapp
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-1. Start the development server:
-```bash
-npm run dev
+make runapp
 ```
 
 The application will be available at `http://localhost:5173`.
