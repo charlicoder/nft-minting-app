@@ -14,10 +14,13 @@ setup:
 cc:
 	cd $(CONTRACT_DIR) && npx hardhat compile
 
+ctest:
+	cd $(CONTRACT_DIR) && npx hardhat test
+
 deployc:
 	@read -p "Enter network name (localhost|sepolia): " name; \
 	cd $(CONTRACT_DIR) && npx hardhat ignition deploy ignition/modules/HelloToken.js --network $$name
-	
+
 runapp:
 	cd $(APP_DIR) && npm install && npm run dev
 

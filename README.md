@@ -102,7 +102,7 @@ Retrieves the title of a specific token.
 
 To run the smart contract tests:
 ```bash
-npx hardhat test
+make ctest
 ```
 
 ## Security Considerations
